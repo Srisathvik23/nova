@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ========= RESET & BASE ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* ========= SECTION 1: HERO ========= */
+.landing-page-1 {
+  background-image: url("../../assets/LandingPageImages/pic1.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #ffffff;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Nav */
+.lp-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.lp-nav-logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.lp-nav-logo img {
+  width: 50px;
+  height: 48px;
+  object-fit: contain;
+}
+.lp-nav-logo p {
+  font-size: clamp(22px, 3.2vw, 40px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.3px;
+}
+
+/* Nav links */
+.lp-nav-texts {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  font-weight: 500;
+  color: #fff;
+  flex-wrap: nowrap;
+}
+.lp-nav-texts li {
+  position: relative;
+  cursor: pointer;
+  font-size: clamp(14px, 1.4vw, 24px);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.lp-nav-texts li:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Dropdown */
+.dropdown {
+  user-select: none;
+}
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+  padding: 8px 0;
+  display: none; /* will show on hover (and you can also control via React state) */
+  z-index: 20;
+}
+.dropdown-content li {
+  padding: 10px 14px;
+  white-space: nowrap;
+}
+.dropdown-content li:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+/* Hover fallback for desktop */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero copy */
+.lp-1-text p {
+  font-size: clamp(28px, 6vw, 54px);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  /* max-width: 12ch; */
+}
+
+/* QR box */
+.lp-1-qr-box {
+  background-color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 14px;
+  width: max-content;
+  /* border-radius: 14px; */
+  backdrop-filter: blur(4px);
+}
+.lp-1-qr-box p {
+  font-size: clamp(16px, 2.4vw, 31.18px);
+  font-weight: 500;
+  color: #000;
+  line-height: 150%;
+}
+.lp-1-qr-box img {
+  width: 124.7px;
+  height: 124.7px;
+  object-fit: contain;
+}
+
+/* ========= SECTION 2 ========= */
+.landing-page-2 {
+  background-color: #6d4c71;
+  color: #fff;
+}
+
+.landing-page-22 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 80px 5%;
+  flex-wrap: nowrap; /* keep side-by-side on desktop/tablet */
+}
+
+.landing-page-2-1 {
+  flex: 1 1 50%;
+  max-width: 646px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.landing-page-2-1-1 {
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+}
+.landing-page-2-1-2 {
+  font-size: clamp(16px, 2.5vw, 32px);
+  line-height: 1.4;
+}
+
+.landing-page-2-2 {
+  flex: 1 1 50%;
+  max-width: 508px;
+}
+.landing-page-2-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* ========= SECTION 3 ========= */
+.landing-page-3 {
+  background: #f9f9f9;
+  color: #111;
+}
+
+.landing-page-33 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 80px 5%;
+  flex-wrap: nowrap; /* keep side-by-side on desktop/tablet */
+}
+
+.landing-page-3-1 {
+  flex: 1 1 50%;
+  max-width: 646px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.landing-page-3-1-1 {
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+}
+.landing-page-3-1-2 {
+  font-size: clamp(16px, 2.5vw, 32px);
+  line-height: 1.4;
+}
+.landing-page-3-1-3 {
+  height: auto;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 32px;
+  background-color: #6d4c71;
+  color: #ffffff;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600;
+  width: fit-content;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.landing-page-3-1-3:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.landing-page-3-2 {
+  flex: 1 1 50%;
+  max-width: 506px;
+}
+.landing-page-3-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* ========= TABLET TWEAKS ========= */
+@media (max-width: 992px) {
+  .lp-nav-texts {
+    gap: 18px;
+  }
+  .landing-page-22,
+  .landing-page-33 {
+    gap: 28px;
+    padding: 60px 4%;
+  }
+  .landing-page-2-1-1,
+  .landing-page-3-1-1 {
+    font-size: clamp(22px, 4.5vw, 40px);
+  }
+  .landing-page-2-1-2,
+  .landing-page-3-1-2 {
+    font-size: clamp(15px, 2.3vw, 22px);
+  }
+}
+
+/* ========= MOBILE STACK (phones only) ========= */
+@media (max-width: 600px) {
+  .lp-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .lp-nav-texts {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .lp-1-text p {
+    text-align: center;
+  }
+  .lp-1-qr-box {
+    margin: 12px auto 0;
+  }
+
+  .landing-page-22,
+  .landing-page-33 {
+    flex-direction: column; /* stack only on small phones */
+    flex-wrap: nowrap;
+    text-align: center;
+    gap: 24px;
+  }
+  .landing-page-2-1,
+  .landing-page-3-1,
+  .landing-page-2-2,
+  .landing-page-3-2 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* ========= OPTIONAL: reverse order for section 3 on desktop/tablet ========= */
+/* Uncomment if you want image left, text right in section 3
+@media (min-width: 601px) {
+  .landing-page-33 { flex-direction: row-reverse; }
+}
+*/

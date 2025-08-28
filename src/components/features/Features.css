@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.feature1-container {
+  font-family: "Poppins", sans-serif;
+}
+.feature-nav {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.feature-logo img {
+  width: 50.87px;
+  height: 48px;
+}
+.feature-text {
+  font-weight: bold;
+  font-size: 40px;
+  color: #6d4c71;
+}
+.feature-text-box ul {
+  display: flex;
+  gap: 32px;
+}
+.feature-text-box ul li {
+  list-style: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+.feature-btn-box button {
+  border-radius: 32px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.29px;
+}
+.feature1-main-text{
+    font-size: 60px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+}
+.feature1-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+.feature1-1-1{
+    display: flex;
+    flex-direction: column;
+    width: 607px;
+    gap: 32px;
+}
+.feature1-1-1-1{
+    font-size: 40px;
+    font-weight: 700;
+    width: 465px;
+}
+.feature1-1-1-2{
+    font-size: 32px;
+    font-weight: 500;
+    width: 582px;
+}
+.feature1-1-2{
+    width: 648px;
+    height: 616px;
+    background-color: #6d4c71;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+}
+.feature1-1-2 img{
+    width: 391px;
+    height: 616px;
+}
+
+.feature1-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+    background-color: #6d4c71;
+}
+.feature1-2-1{
+    display: flex;
+    flex-direction: column;
+    width: 607px;
+    gap: 32px;
+}
+.feature1-2-1-1{
+    font-size: 40px;
+    font-weight: 700;
+    width: 607px;
+    color: #ffffff;
+}
+.feature1-2-1-2{
+    font-size: 32px;
+    font-weight: 500;
+    width: 607px;
+    color: #ffffff;
+
+}
+.feature1-2-2{
+    width: 553px;
+    height: 482px;
+    background-color: #E0CFE3;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    align-items: center;
+}
+.feature1-2-2 img{
+    width: 375px;
+    height: 290px;
+}
+/* .feature1-1-1-2-a{
+    display: flex;
+    align-items: center;
+} */
