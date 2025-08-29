@@ -1,6 +1,6 @@
+/* --- keep your imports & reset as-is --- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* ========= RESET & BASE ========= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,6 +57,7 @@ body {
 /* Nav links */
 .lp-nav-texts {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 24px;
   font-weight: 500;
@@ -76,46 +77,84 @@ body {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Dropdown */
+/* ======================= DROPDOWN ======================= */
 .dropdown {
+  position: relative;
   user-select: none;
 }
+
+/* If you use a <button> for Features, this styles it.
+   If you kept plain text, it's harmless. */
+.dropbtn {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0; /* the li already has padding */
+  border-radius: 6px;
+}
+.dropbtn:focus {
+  outline: none;
+}
+
+/* Panel (hidden by default) */
 .dropdown-content {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  min-width: 180px;
-  background: rgba(0, 0, 0, 0.75);
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(6px);
   color: #e5e7eb;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 12px;
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
   padding: 8px 0;
-  display: none; /* will show on hover (and you can also control via React state) */
-  z-index: 20;
-}
-.dropdown-content li {
-  padding: 10px 14px;
-  white-space: nowrap;
-}
-.dropdown-content li:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-/* Hover fallback for desktop */
-.dropdown:hover .dropdown-content {
-  display: block;
+  display: none;
+  z-index: 50;
+
+  /* nice slide/fade */
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-/* Hero copy */
+/* Items */
+.dropdown-content li {
+  list-style: none;
+}
+.dropdown-content a,
+.dropdown-content li {
+  display: block;
+  padding: 10px 14px;
+  white-space: nowrap;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+.dropdown-content a:hover,
+.dropdown-content li:hover,
+.dropdown-content a:focus {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+/* Show on hover (desktop) and when focused (keyboard) */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========= HERO CONTENT ========= */
 .lp-1-text p {
   font-size: clamp(28px, 6vw, 54px);
   font-weight: 700;
   letter-spacing: 0.3px;
-  /* max-width: 12ch; */
 }
 
-/* QR box */
 .lp-1-qr-box {
   background-color: rgba(255, 255, 255, 0.72);
   display: flex;
@@ -123,7 +162,6 @@ body {
   align-items: center;
   padding: 10px 14px;
   width: max-content;
-  /* border-radius: 14px; */
   backdrop-filter: blur(4px);
 }
 .lp-1-qr-box p {
@@ -143,16 +181,14 @@ body {
   background-color: #6d4c71;
   color: #fff;
 }
-
 .landing-page-22 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
   padding: 80px 5%;
-  flex-wrap: nowrap; /* keep side-by-side on desktop/tablet */
+  flex-wrap: nowrap;
 }
-
 .landing-page-2-1 {
   flex: 1 1 50%;
   max-width: 646px;
@@ -169,7 +205,6 @@ body {
   font-size: clamp(16px, 2.5vw, 32px);
   line-height: 1.4;
 }
-
 .landing-page-2-2 {
   flex: 1 1 50%;
   max-width: 508px;
@@ -187,16 +222,14 @@ body {
   background: #f9f9f9;
   color: #111;
 }
-
 .landing-page-33 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
   padding: 80px 5%;
-  flex-wrap: nowrap; /* keep side-by-side on desktop/tablet */
+  flex-wrap: nowrap;
 }
-
 .landing-page-3-1 {
   flex: 1 1 50%;
   max-width: 646px;
@@ -229,7 +262,6 @@ body {
   opacity: 0.95;
   transform: translateY(-1px);
 }
-
 .landing-page-3-2 {
   flex: 1 1 50%;
   max-width: 506px;
@@ -274,6 +306,21 @@ body {
     gap: 12px;
   }
 
+  /* Make dropdown behave like inline menu on phones (no hover) */
+  .dropdown {
+    position: static;
+  }
+  .dropdown-content {
+    position: static;
+    display: block; /* visible on mobile */
+    opacity: 1;
+    transform: none;
+    margin-top: 6px;
+    padding: 6px 0;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: none;
+  }
+
   .lp-1-text p {
     text-align: center;
   }
@@ -283,7 +330,7 @@ body {
 
   .landing-page-22,
   .landing-page-33 {
-    flex-direction: column; /* stack only on small phones */
+    flex-direction: column;
     flex-wrap: nowrap;
     text-align: center;
     gap: 24px;
@@ -297,9 +344,110 @@ body {
   }
 }
 
-/* ========= OPTIONAL: reverse order for section 3 on desktop/tablet ========= */
-/* Uncomment if you want image left, text right in section 3
-@media (min-width: 601px) {
-  .landing-page-33 { flex-direction: row-reverse; }
+/* --- Navbar dropdown / popover --- */
+.lp-nav-texts .dropdown {
+  position: relative;
 }
-*/
+
+/* trigger button */
+.dropbtn {
+  background: transparent;
+  border: 0;
+  padding: 8px 2px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.dropbtn:focus-visible {
+  outline: 2px solid #6aa7ff;
+  outline-offset: 2px;
+}
+
+/* the popover panel */
+.features-popover {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 14px);
+  transform: translateX(-50%) scale(0.98);
+  width: min(920px, 92vw);
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 28px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+  z-index: 50;
+}
+
+/* caret */
+.features-popover::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* show on hover/focus and on mobile toggle (.open) */
+.lp-nav-texts .dropdown:hover > .features-popover,
+.lp-nav-texts .dropdown:focus-within > .features-popover,
+.lp-nav-texts .dropdown.open > .features-popover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+/* grid + tiles to match your design */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.feature-tile {
+  background: #fff;
+  /* border: 1px solid #eee; */
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+}
+.feature-tile h3 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.feature-tile p {
+  font-size: 16px;
+  margin: 0;
+  color: #555;
+  line-height: 1.45;
+}
+
+/* mobile: full width under nav */
+@media (max-width: 720px) {
+  .features-popover {
+    left: 0;
+    right: 0;
+    transform: translateX(0) scale(0.98);
+    margin-inline: auto;
+  }
+  .lp-nav-texts .dropdown:hover > .features-popover,
+  .lp-nav-texts .dropdown:focus-within > .features-popover,
+  .lp-nav-texts .dropdown.open > .features-popover {
+    transform: translateX(0) scale(1);
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

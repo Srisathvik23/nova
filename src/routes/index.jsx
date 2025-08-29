@@ -17,13 +17,13 @@ const index = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/" element={<Feature1 />} />
-        <Route path="/" element={<Feature2 />} />
-        <Route path="/" element={<Feature3 />} />
-        <Route path="/" element={<Feature4 />} />
-        <Route path="/" element={<Feature5 />} />
-        <Route path="/" element={<Feature6 />} />
-        <Route path="/" element={<Feature7 />} /> */}
+        <Route path="/feelFirstMode" element={<Feature1 />} />
+        <Route path="/AISmartBlurForSafety" element={<Feature2 />} />
+        <Route path="/NoGhostingMode" element={<Feature3 />} />
+        <Route path="/KindStartConversation" element={<Feature4 />} />
+        <Route path="/BuiltForEmotionalSafety" element={<Feature5 />} />
+        <Route path="/AKindCommunityPolicesItself" element={<Feature6 />} />
+        <Route path="/KnowMoreAboutChingu" element={<Feature7 />} />
       </Routes>
     </Layout>
   );
