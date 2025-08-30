@@ -4,8 +4,10 @@ import feature2 from "../../assets/Feature1/feature7-1.png";
 import feature3 from "../../assets/Feature1/feature7-2.png";
 import feature4 from "../../assets/Feature1/feature7-3.png";
 import "./Features.css";
+import { useNavigate } from "react-router-dom";
 
 const Feature7 = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="feature1-container">
@@ -30,10 +32,10 @@ const Feature7 = () => {
           </div>
         </div>
         <p className="feature1-main-text">Meet Chingu: The Vibe Buddy</p>
-        <div className="feature1-1">
-          <div className="feature1-1-1">
+        <div className="feature1-12">
+          <div className="feature1-1-12">
             <div className="feature1-1-1-1">What is Chingu?</div>
-            <div className="feature1-1-1-2">
+            <div className="feature1-1-1-22">
               Chingu is Nova’s gentle AI companion, part guardian, part best
               friend. It listens, adapts, and flows with your feelings, making
               dating feel safe, soft, and human. Chingu never takes over your
@@ -41,17 +43,22 @@ const Feature7 = () => {
               calm exactly when you need it.
             </div>
           </div>
-          <div className="feature1-1-2">
+          <div className="feature1-1-22">
+            <div>
             <img src={feature2} alt="" />
+            </div>
+            <button className="landing-page-3-1-3" onClick={() => navigate("/ChinguStory")}>
+              Know more about chingu
+            </button>
           </div>
         </div>
         <div className="feature1-2">
-          <div className="feature1-2-2">
+          <div className="feature1-2-22">
             <img src={feature3} alt="" />
           </div>
           <div className="feature1-2-1">
             <div className="feature1-2-1-1">How it works</div>
-            <div className="feature1-2-1-2">
+            <div className="feature1-2-1-22">
               Chingu senses the tone of your conversations and flows with your
               emotional rhythm.Excited? It adds playful sparkles.Sad? It slows
               down and offers comfort.Anxious? It lightens the mood with silly
@@ -64,7 +71,7 @@ const Feature7 = () => {
         <div className="feature1-1">
           <div className="feature1-1-1">
             <div className="feature1-1-1-1">Why it matters</div>
-            <div className="feature1-1-1-2">
+            <div className="feature1-1-1-22">
               <div className="feature1-1-1-2-a">
                 Dating isn’t just about matches, it’s about how you feel while
                 connecting. Chingu makes sure you never navigate that alone.
@@ -74,7 +81,7 @@ const Feature7 = () => {
               </div>
             </div>
           </div>
-          <div className="feature1-1-2">
+          <div className="feature1-1-222">
             <img src={feature4} alt="" />
           </div>
         </div>

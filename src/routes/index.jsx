@@ -9,7 +9,10 @@ import Feature3 from "../components/features/Feature3";
 import Feature4 from "../components/features/Feature4";
 import Feature5 from "../components/features/Feature5";
 import Feature6 from "../components/features/Feature6";
-import Feature7 from "../components/features/Feature7";
+import AboutChingu from "../components/features/AboutChingu";
+import ChinguStory from "../components/features/ChinguStory";
+import Faq from "../components/Company/Faq";
+import PrivacyPolicy from "../components/Company/PrivacyPolicy";
 
 const index = () => {
   return (
@@ -23,7 +26,10 @@ const index = () => {
         <Route path="/KindStartConversation" element={<Feature4 />} />
         <Route path="/BuiltForEmotionalSafety" element={<Feature5 />} />
         <Route path="/AKindCommunityPolicesItself" element={<Feature6 />} />
-        <Route path="/KnowMoreAboutChingu" element={<Feature7 />} />
+        <Route path="/KnowMoreAboutChingu" element={<AboutChingu />} />
+        <Route path="/ChinguStory" element={<ChinguStory />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
     </Layout>
   );

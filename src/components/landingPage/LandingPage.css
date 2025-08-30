@@ -251,6 +251,7 @@ body {
   padding: 14px 24px;
   border: none;
   border-radius: 32px;
+  cursor: pointer;
   background-color: #6d4c71;
   color: #ffffff;
   font-size: clamp(16px, 2vw, 22px);

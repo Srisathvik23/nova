@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.cs-container {
+  padding: 50px 100px;
+  font-family: "Poppins", sans-serif;
+}
+.cs-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cs-logo img {
+  width: 64.64px;
+  height: 61px;
+}
+.cs-logo p {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 150%;
+  color: #6d4c71;
+}
+.cs-1 {
+  display: flex;
+  align-items: center;
+  gap: 180px;
+}
+.cs-1-1 {
+  max-width: 683px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cs-1-1-heading {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 150%;
+}
+.cs-1-1-text {
+  font-size: 24px;
+  line-height: 150%;
+}
+.cs-1-2 img {
+  height: 521px;
+  width: 460px;
+}
