@@ -5,6 +5,7 @@ import feature3 from "../../assets/Feature1/feature1-2.png";
 import feature4 from "../../assets/Feature1/feature1-3.png";
 import { PiDotOutlineFill } from "react-icons/pi";
 import "./Features.css";
+import Lightfooter from "../../layout/Lightfooter";
 
 const Feature = () => {
   return (
@@ -77,6 +78,8 @@ const Feature = () => {
           </div>
         </div>
       </div>
+
+      <Lightfooter/>
     </>
   );
 };

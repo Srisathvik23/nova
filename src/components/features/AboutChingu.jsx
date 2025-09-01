@@ -5,6 +5,7 @@ import feature3 from "../../assets/Feature1/feature7-2.png";
 import feature4 from "../../assets/Feature1/feature7-3.png";
 import "./Features.css";
 import { useNavigate } from "react-router-dom";
+import Darkfooter from "../../layout/Darkfooter";
 
 const Feature7 = () => {
   const navigate = useNavigate();
@@ -86,6 +87,7 @@ const Feature7 = () => {
           </div>
         </div>
       </div>
+      <Darkfooter/>
     </>
   );
 };

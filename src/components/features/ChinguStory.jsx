@@ -4,9 +4,11 @@ import featureLogo from "../../assets/Feature1/featureLogo.png";
 import csimg1 from "../../assets/Feature1/csimg1.png";
 import csimg2 from "../../assets/Feature1/csimg2.png";
 import csimg3 from "../../assets/Feature1/csimg3.png";
+import Darkfooter from "../../layout/Darkfooter";
 
 const ChinguStory = () => {
   return (
+    <>
     <div className="cs-container">
       <div className="cs-logo">
         <img src={featureLogo} alt="" />
@@ -80,6 +82,8 @@ const ChinguStory = () => {
         </div>
       </div>
     </div>
+    <Darkfooter/>
+    </>
   );
 };
 
