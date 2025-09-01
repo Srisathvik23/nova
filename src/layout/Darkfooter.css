@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ========= BASE ========= */
+* { box-sizing: border-box; }
+.df-footer-container {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: #6d4c71;
+  color: white;
+}
+
+/* ========= ROW 1 ========= */
+.df-ft-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+
+.df-ft-1-1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 auto;
+}
+.df-ft-1-1-logo { height: 61px; width: 64px; object-fit: contain; }
+.df-ft-1-1-text {
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 48px);
+  color: white;
+  line-height: 1;
+}
+
+.df-ft-1-2 {
+  display: flex;
+  gap: 64px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.df-ft-1-2-heading {
+  font-weight: 700;
+  font-size: clamp(16px, 2vw, 24px);
+  /* color: #000; */
+  margin-bottom: 6px;
+}
+
+.df-ft-1-2-text {
+  font-size: clamp(13px, 1.6vw, 20px);
+  list-style: none;
+  line-height: 2.2em;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+.df-ft-1-2-a ul { margin: 0; padding: 0; }
+
+/* ========= ROW 2 ========= */
+.df-ft-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.df-ft-2-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 1 auto;
+}
+
+.df-ft-2-1-a,
+.df-ft-2-1-b {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 12px;
+  width: 255px;
+  max-width: 100%;
+}
+
+.df-ft-2-1-icon { width: 40px; height: 36px; object-fit: contain; }
+.df-ft-2-1-icon2 { width: 30px; height: 34px; object-fit: contain; }
+
+.df-ft-2-1-a-text-1 {
+  color: #fff;
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.df-ft-2-1-a-text-2 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.df-ft-2-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 0 1 auto;
+}
+
+.df-ft-2-2-icons {
+  display: flex;
+  gap: clamp(14px, 3.2vw, 40px);
+  flex-wrap: wrap;
+}
+.df-ft-2-2-icons img {
+  height: 26px;
+  width: 26px;
+  object-fit: contain;
+}
+
+.df-ft-2-2-text {
+  font-size: clamp(10px, 1.5vw, 12px);
+  /* color: #111; */
+}
+
+/* ========= ROW 3 ========= */
+.df-ft-3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+.df-ft-3 img { width: 24px; height: 24px; object-fit: contain; }
+.df-ft-3 p  { font-size: clamp(12px, 1.6vw, 14px); }
+
+/* ========= RESPONSIVE BREAKPOINTS ========= */
+
+/* Large tablets (<= 1200px) */
+@media (max-width: 1200px) {
+  .df-footer-container { padding: 24px 40px; gap: 40px; }
+  .df-ft-1-2 { gap: 48px; }
+}
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .df-footer-container { padding: 24px 32px; gap: 36px; }
+
+  .df-ft-1 { gap: 24px; }
+  .df-ft-1-2 { gap: 36px; }
+
+  .df-ft-2 { gap: 20px; }
+  .df-ft-2-1 { gap: 12px; }
+  .df-ft-2-1-a, .df-ft-2-1-b { width: 230px; }
+
+  .df-ft-2-2-icons img { width: 24px; height: 24px; }
+}
+
+/* Small tablets / large phones (<= 768px) */
+@media (max-width: 768px) {
+  .df-footer-container { padding: 22px 24px; gap: 32px; }
+
+  .df-ft-1, .df-ft-2 {
+    flex-wrap: wrap;
+  }
+
+  .df-ft-1-1 { flex: 1 1 100%; }
+  .df-ft-1-2 {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .df-ft-2-1, .df-ft-2-2 { flex: 1 1 100%; }
+  .df-ft-2-2 { align-items: flex-start; }
+  .df-ft-2-2-icons { gap: 16px; }
+}
+
+/* Phones (<= 560px) */
+@media (max-width: 560px) {
+  .df-footer-container { padding: 20px 18px; gap: 28px; }
+
+  .df-ft-1-2 {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .df-ft-1-2-text { line-height: 1.9em; }
+
+  .df-ft-2-1-a, .df-ft-2-1-b { width: 100%; }
+  .df-ft-2-2-text { font-size: 11px; }
+
+  .df-ft-3 { justify-content: flex-end; }
+}
+
+/* Small phones (<= 400px) */
+@media (max-width: 400px) {
+  .df-ft-1-1-logo { width: 50px; height: 48px; }
+  .df-ft-2-2-icons img { width: 22px; height: 22px; }
+}

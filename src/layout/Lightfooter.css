@@ -2,38 +2,39 @@
 
 /* ========= BASE ========= */
 * { box-sizing: border-box; }
-.footer-container {
+.lt-footer-container {
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
+  background-color: white;
   font-family: "Poppins", sans-serif;
 }
 
 /* ========= ROW 1 ========= */
-.ft-1 {
+.lt-ft-1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: nowrap;               /* keep left/right positions on wide screens */
+  flex-wrap: nowrap;               
   gap: 32px;
 }
 
-.ft-1-1 {
+.lt-ft-1-1 {
   display: flex;
   align-items: center;
   gap: 8px;
   flex: 0 1 auto;
 }
-.ft-1-1-logo { height: 61px; width: 64px; object-fit: contain; }
-.ft-1-1-text {
+.lt-ft-1-1-logo { height: 61px; width: 64px; object-fit: contain; }
+.lt-ft-1-1-text {
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 48px);   /* scales down on smaller screens */
+  font-size: clamp(28px, 4vw, 48px);   
   color: #6d4c71;
   line-height: 1;
 }
 
-.ft-1-2 {
+.lt-ft-1-2 {
   display: flex;
   gap: 64px;
   flex: 1 1 auto;
@@ -41,14 +42,14 @@
   flex-wrap: nowrap;
 }
 
-.ft-1-2-heading {
+.lt-ft-1-2-heading {
   font-weight: 700;
   font-size: clamp(16px, 2vw, 24px);
   color: #000;
   margin-bottom: 6px;
 }
 
-.ft-1-2-text {
+.lt-ft-1-2-text {
   font-size: clamp(13px, 1.6vw, 20px);
   list-style: none;
   line-height: 2.2em;
@@ -56,10 +57,10 @@
   margin: 0;
   padding: 0;
 }
-.ft-1-2-a ul { margin: 0; padding: 0; }
+.lt-ft-1-2-a ul { margin: 0; padding: 0; }
 
 /* ========= ROW 2 ========= */
-.ft-2 {
+.lt-ft-2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -67,15 +68,15 @@
   flex-wrap: nowrap;
 }
 
-.ft-2-1 {
+.lt-ft-2-1 {
   display: flex;
   flex-direction: column;
   gap: 16px;
   flex: 0 1 auto;
 }
 
-.ft-2-1-a,
-.ft-2-1-b {
+.lt-ft-2-1-a,
+.lt-ft-2-1-b {
   background-color: #1a1a1a;
   border-radius: 12px;
   display: flex;
@@ -86,16 +87,16 @@
   max-width: 100%;
 }
 
-.ft-2-1-icon { width: 40px; height: 36px; object-fit: contain; }
-.ft-2-1-icon2 { width: 30px; height: 34px; object-fit: contain; }
+.lt-ft-2-1-icon { width: 40px; height: 36px; object-fit: contain; }
+.lt-ft-2-1-icon2 { width: 30px; height: 34px; object-fit: contain; }
 
-.ft-2-1-a-text-1 {
+.lt-ft-2-1-a-text-1 {
   color: #fff;
   font-size: 12px;
   margin: 0;
   letter-spacing: 1px;
 }
-.ft-2-1-a-text-2 {
+.lt-ft-2-1-a-text-2 {
   margin: 0;
   color: #fff;
   font-size: 16px;
@@ -103,7 +104,7 @@
   font-weight: 500;
 }
 
-.ft-2-2 {
+.lt-ft-2-2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -111,97 +112,93 @@
   flex: 0 1 auto;
 }
 
-.ft-2-2-icons {
+.lt-ft-2-2-icons {
   display: flex;
   gap: clamp(14px, 3.2vw, 40px);
-  flex-wrap: wrap;                  /* allow wrap on smaller screens without reordering */
+  flex-wrap: wrap;                 
 }
-.ft-2-2-icons img {
+.lt-ft-2-2-icons img {
   height: 26px;
   width: 26px;
   object-fit: contain;
 }
 
-.ft-2-2-text {
+.lt-ft-2-2-text {
   font-size: clamp(10px, 1.5vw, 12px);
   color: #111;
 }
 
 /* ========= ROW 3 ========= */
-.ft-3 {
+.lt-ft-3 {
   display: flex;
-  justify-content: flex-end;        /* keep position to the right */
+  justify-content: flex-end;        
   align-items: center;
   gap: 6px;
 }
-.ft-3 img { width: 24px; height: 24px; object-fit: contain; }
-.ft-3 p  { font-size: clamp(12px, 1.6vw, 14px); }
+.lt-ft-3 img { width: 24px; height: 24px; object-fit: contain; }
+.lt-ft-3 p  { font-size: clamp(12px, 1.6vw, 14px); }
 
 /* ========= RESPONSIVE BREAKPOINTS ========= */
 
 /* Large tablets (<= 1200px) */
 @media (max-width: 1200px) {
-  .footer-container { padding: 24px 40px; gap: 40px; }
-  .ft-1-2 { gap: 48px; }
+  .lt-footer-container { padding: 24px 40px; gap: 40px; }
+  .lt-ft-1-2 { gap: 48px; }
 }
 
 /* Tablets (<= 992px) */
 @media (max-width: 992px) {
-  .footer-container { padding: 24px 32px; gap: 36px; }
+  .lt-footer-container { padding: 24px 32px; gap: 36px; }
 
-  .ft-1 { gap: 24px; }
-  .ft-1-2 { gap: 36px; }
+  .lt-ft-1 { gap: 24px; }
+  .lt-ft-1-2 { gap: 36px; }
 
-  .ft-2 { gap: 20px; }
-  .ft-2-1 { gap: 12px; }
-  .ft-2-1-a, .ft-2-1-b { width: 230px; }
+  .lt-ft-2 { gap: 20px; }
+  .lt-ft-2-1 { gap: 12px; }
+  .lt-ft-2-1-a, .lt-ft-2-1-b { width: 230px; }
 
-  .ft-2-2-icons img { width: 24px; height: 24px; }
+  .lt-ft-2-2-icons img { width: 24px; height: 24px; }
 }
 
 /* Small tablets / large phones (<= 768px) */
 @media (max-width: 768px) {
-  .footer-container { padding: 22px 24px; gap: 32px; }
+  .lt-footer-container { padding: 22px 24px; gap: 32px; }
 
-  /* Allow wrapping but preserve order (no reordering) */
-  .ft-1, .ft-2 {
+  .lt-ft-1, .lt-ft-2 {
     flex-wrap: wrap;
   }
 
-  /* Row 1: logo keeps left, link columns move below but remain on right alignment within their row width */
-  .ft-1-1 { flex: 1 1 100%; }
-  .ft-1-2 {
+  .lt-ft-1-1 { flex: 1 1 100%; }
+  .lt-ft-1-2 {
     flex: 1 1 100%;
     justify-content: space-between;
     gap: 24px;
   }
 
-  /* Row 2: store buttons above socials but same left/right grouping */
-  .ft-2-1, .ft-2-2 { flex: 1 1 100%; }
-  .ft-2-2 { align-items: flex-start; }
-  .ft-2-2-icons { gap: 16px; }
+  .lt-ft-2-1, .lt-ft-2-2 { flex: 1 1 100%; }
+  .lt-ft-2-2 { align-items: flex-start; }
+  .lt-ft-2-2-icons { gap: 16px; }
 }
 
 /* Phones (<= 560px) */
 @media (max-width: 560px) {
-  .footer-container { padding: 20px 18px; gap: 28px; }
+  .lt-footer-container { padding: 20px 18px; gap: 28px; }
 
-  .ft-1-2 {
+  .lt-ft-1-2 {
     gap: 18px;
-    flex-wrap: wrap;                 /* columns wrap but keep sequence */
+    flex-wrap: wrap;                 
   }
 
-  /* tighten line-height for long Legal list */
-  .ft-1-2-text { line-height: 1.9em; }
+  .lt-ft-1-2-text { line-height: 1.9em; }
 
-  .ft-2-1-a, .ft-2-1-b { width: 100%; }
-  .ft-2-2-text { font-size: 11px; }
+  .lt-ft-2-1-a, .lt-ft-2-1-b { width: 100%; }
+  .lt-ft-2-2-text { font-size: 11px; }
 
-  .ft-3 { justify-content: flex-end; } /* stays on the right edge */
+  .lt-ft-3 { justify-content: flex-end; } 
 }
 
 /* Small phones (<= 400px) */
 @media (max-width: 400px) {
-  .ft-1-1-logo { width: 50px; height: 48px; }
-  .ft-2-2-icons img { width: 22px; height: 22px; }
+  .lt-ft-1-1-logo { width: 50px; height: 48px; }
+  .lt-ft-2-2-icons img { width: 22px; height: 22px; }
 }

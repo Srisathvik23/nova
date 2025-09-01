@@ -6,6 +6,8 @@ import mainlogo from "../../assets/LandingPageImages/mainLogo.png";
 import qr from "../../assets/LandingPageImages/qr.png";
 import pic2 from "../../assets/LandingPageImages/pic2.png";
 import pic3 from "../../assets/LandingPageImages/pic3.png";
+import Lightfooter from "../../layout/Lightfooter";
+
 
 const LandingPage = () => {
 
@@ -159,6 +161,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      <Lightfooter/>
     </>
   );
 };

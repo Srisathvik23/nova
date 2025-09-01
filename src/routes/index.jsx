@@ -13,6 +13,8 @@ import AboutChingu from "../components/features/AboutChingu";
 import ChinguStory from "../components/features/ChinguStory";
 import Faq from "../components/Company/Faq";
 import PrivacyPolicy from "../components/Company/PrivacyPolicy";
+import Darkfooter from '../layout/Darkfooter';
+import Lightfooter from '../layout/Lightfooter';
 
 const index = () => {
   return (
@@ -30,6 +32,9 @@ const index = () => {
         <Route path="/ChinguStory" element={<ChinguStory />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/darkfooter" element={<Darkfooter />} />
+        <Route path="/lightfooter" element={<Lightfooter />} />
+
       </Routes>
     </Layout>
   );
